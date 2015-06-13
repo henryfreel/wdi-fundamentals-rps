@@ -26,7 +26,7 @@ function getPlayerMove(move) {
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
     // COMPLETED
-    return move || 'getInput()';
+    return (move || getInput());
 }
 
 function getComputerMove(move) {
@@ -34,7 +34,7 @@ function getComputerMove(move) {
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
     // COMPLETED
-    return move || 'randomPlay()';
+    return (move || randomPlay());
 }
 
 function getWinner(playerMove,computerMove) {
@@ -42,7 +42,48 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    // here is the start of my code, here is some more
+
+    if (playerMove === computerMove) {
+
+        winner = "tie";
+
+    } else if (playerMove === "rock") {
+
+        if (computerMove === "paper") {
+
+            winner = "computer";
+
+        } else {
+
+            winner = "player"
+
+        }
+
+    } else if (playerMove === "paper") {
+
+        if (computerMove === "scissors") {
+
+            winner = "computer";
+
+        } else {
+
+            winner = "player";
+        }
+
+    } else if (playerMove === "scissors") {
+
+        if (computerMove === "rock") {
+
+            winner = "computer";
+
+        } else {
+
+            winner = "player";
+
+        }
+
+    }
+
     return winner;
 }
 
