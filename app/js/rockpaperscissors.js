@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////
 'use strict';
 
-ffunction getInput() {
+function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
 }
@@ -93,7 +93,7 @@ function playToFive() {
         
     } 
     
-    console.log("Final score"+ [playerWins]+ "for the player and "+[computerWins]+ " for the computer");
+    console.log("Final score "+ [playerWins]+ " for the player and "+[computerWins]+ " for the computer");
         
     return [playerWins, computerWins];
     
